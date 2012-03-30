@@ -1,7 +1,7 @@
 package no.bekk.bekkopen.maven.extension;
 
 import org.apache.maven.AbstractMavenLifecycleParticipant;
-import org.apache.maven.cli.BuildTimingExecutionListener;
+import org.apache.maven.cli.ExecutionTimingExecutionListener;
 import org.apache.maven.execution.MavenSession;
 import org.apache.maven.execution.RuntimeInformation;
 import org.codehaus.plexus.component.annotations.Component;
@@ -29,7 +29,7 @@ public class BuildTimeMavenExtension extends AbstractMavenLifecycleParticipant {
 		logger.info("|____/ \\__,_|_|_|\\__,_|  |_|  |_|_| |_| |_|\\___|");
 		logger.info("");
 
-		session.getRequest().setExecutionListener(new BuildTimingExecutionListener(logger));
+		session.getRequest().setExecutionListener(new ExecutionTimingExecutionListener(logger));
 
 	}
 }
