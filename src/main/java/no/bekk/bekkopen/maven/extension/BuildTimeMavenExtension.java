@@ -3,10 +3,11 @@ package no.bekk.bekkopen.maven.extension;
 import org.apache.maven.AbstractMavenLifecycleParticipant;
 import org.apache.maven.cli.ExecutionTimingExecutionListener;
 import org.apache.maven.execution.MavenSession;
-import org.apache.maven.execution.RuntimeInformation;
+import org.apache.maven.rtinfo.RuntimeInformation;
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.component.annotations.Requirement;
-import org.codehaus.plexus.logging.Logger;
+import org.slf4j.Logger;
+
 
 @Component(role = AbstractMavenLifecycleParticipant.class, hint = "buildtime")
 public class BuildTimeMavenExtension extends AbstractMavenLifecycleParticipant {
